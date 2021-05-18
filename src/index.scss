@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700;900&display=swap');
+
+//Primary colors
+$midnight: #0c273b;
+$white: #ffffff;
+
+$lime: #b5e48c;
+$lime-light: #d9ed92;
+$lime-dark: #99d98c;
+
+$emerald: #52b69a;
+$emerald-light: #76c893;
+$emerald-dark: #34a0a4;
+
+//Secondary colors
+$honey: #ede293;
+$honey-light: #e9ed93;
+$honey-dark: #edd293;
+
+$coral: #edb393;
+$coral-light: #edc393;
+$coral-dark: #eda493;
+
+$navy: #1a759f;
+$navy-light: #168aad;
+$navy-dark: #1e6091;
+
+//Gray scale
+$gray-1: #f6f9fc;
+$gray-2: #e0e8f0;
+$gray-3: #cdd6e0;
+$gray-4: #a5b5c4;
+$gray-5: #97a7ba;
+$gray-6: #4c5f72;
+
+//Midnight scale
+$midnight-1: #184e77;
+$midnight-2: #17486e;
+$midnight-3: #154366;
+$midnight-4: #133d5d;
+$midnight-5: #113755;
+$midnight-6: #10324c;
+$midnight-7: #0e2c44;
+
+//Alternative colors
+$red: #ed9593;
+
+//Fonts
+$primary-font: 'Poppins', 'Helvetica Neue', sans-serif;
+$code-font: 'Source Code Pro', monospace;
+
+.title-1 {
+  font-size: 64pt;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 64pt;
+  margin-top: 64pt;
+}
+
+.title-2 {
+  font-size: 48pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 48pt;
+  margin-top: 48pt;
+}
+.title-3 {
+  font-size: 36pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 36pt;
+  margin-top: 36pt;
+}
+
+.title-4 {
+  font-size: 24pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 24pt;
+  margin-top: 24pt;
+}
+
+.title-5 {
+  font-size: 18pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 18pt;
+  margin-top: 18pt;
+}
+
+.title-6 {
+  font-size: 14pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 14pt;
+  margin-top: 14pt;
+}
+
+.title-7 {
+  font-size: 12pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 12pt;
+  margin-top: 12pt;
+}
+
+.title-8 {
+  font-size: 10.5pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 10.5pt;
+  margin-top: 10.5pt;
+}
+
+body {
+  margin: 0;
+  font-family: $primary-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $midnight;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: $gray-6;
+  line-height: 1.6;
+  font-size: 10.5pt;
+  font-weight: 400;
+}
+
+.small {
+  color: $gray-6;
+  line-height: 1.6;
+  font-size: 8pt;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: $lime-dark;
+  line-height: 1.6;
+  font-size: 10.5pt;
+  font-weight: 600;
+
+  &:hover {
+    color: $emerald;
+  }
+}
+.unmark-text {
+  user-select:none
+}
+
+input[type="text"] {
+  border:none;
+  border-bottom: 1px solid $midnight-7;
+  color: $midnight-7;
+  line-height: 1.6;
+  font-size: 15.5pt;
+  font-weight: 400;
+  vertical-align: text-bottom;
+  padding: 0 10px;
+  
+  &:focus-visible{
+    outline: none;
+
+  }
+  &:focus{
+    border:none;
+    border-bottom: 1px solid $midnight-7;
+  }
+
+  &:placeholder-shown{
+    color: $gray-1;
+    opacity: 0.5;
+  }
+}
+
+
+.page-container {
+  min-width:900px;
+  min-height: 600px;
+  width:100%;
+  background-color: $white;
+  display:flex;
+  flex-direction: column;
+}
+.main{
+  max-width: 1260px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  min-height: calc(100vh - 60px);
+}
+.info-container {
+  padding: 15px;
+  margin: 20px 0 0 60px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+
+.header{
+padding-left: 10%;
+display:flex;
+background-color: $emerald;
+height: 60px;
+width:100%;
+}
+.title{
+  font-size: 18pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 18pt;
+  margin-top: 18pt;
+  color: $white;
+}
+.view{
+  max-width: 1800px;
+}
