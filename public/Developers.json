@@ -1,0 +1,149 @@
+{ 
+  "data":[
+    {
+      "developerId": 0,
+      "developerName": "Dev AB",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 2,
+      "developerName": "Bygge Bygg AW",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 3,
+      "developerName": "Företag2",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 4,
+      "developerName": "Husföretaget",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 5,
+      "developerName": "Husvärden AB",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 6,
+      "developerName": "Celine Dion",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 7,
+      "developerName": "Kalmar AB",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 8,
+      "developerName": "Torsten Sten AB",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 9,
+      "developerName": "Klyckan Krysset AB",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 10,
+      "developerName": "AB AB",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 11,
+      "developerName": "BoHärNu",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 12,
+      "developerName": "JagHarBraDatakvalitet AB",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 13,
+      "developerName": "HejSvejsAB",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 14,
+      "developerName": "RequestaMigHej",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 15,
+      "developerName": "ÖppnaDinDörr",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 16,
+      "developerName": "Hela Sverige Bygger AB",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 17,
+      "developerName": "Hemkunskapslärarnas Riksförbund",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 18,
+      "developerName": "Svea Rike AB",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 19,
+      "developerName": "Maldiverna",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 20,
+      "developerName": "Slöjd-Jannes Hus",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 21,
+      "developerName": "Rektangulära hus",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 22,
+      "developerName": "Hem",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 23,
+      "developerName": "Roliga Hus",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 24,
+      "developerName": "Boverket",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 25,
+      "developerName": "StenStensson",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 26,
+      "developerName": "Trygg Grund",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 27,
+      "developerName": "Hela vida världens Hus",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 28,
+      "developerName": "Husdrömmen",
+      "developerMail": "example@examplemail.com"
+    },
+    {
+      "developerId": 29,
+      "developerName": "Växsjö Hus",
+      "developerMail": "example@examplemail.com"
+    }
+  ]
+}

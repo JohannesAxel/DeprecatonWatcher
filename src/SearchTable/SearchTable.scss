@@ -21,3 +21,23 @@ select {
   font-size: 10.5pt !important;
   font-weight: 400 !important;
 }
+
+.MuiTableRow-root[name="data-row"] {
+  &:hover {
+    background-color: $gray-1;
+    width:90%;
+    transition: box-shadow 50ms ease-out, background 10ms ease-out;
+    box-shadow:inset 0px 0px 0px 0px $gray-2, inset 0px 0px 0px 0px $gray-2, 1px 0px 4px -1px $gray-2, -1px 0px 4px -1px $gray-2, 0px 1px 4px -1px $gray-2, 0px -1px 4px -1px $gray-2;
+  }
+  &:active{  
+    transition: box-shadow 100ms ease-out, background 100ms ease-out;
+    background-color: $gray-2;
+    box-shadow: inset 2px 0px 5px -2px $gray-2, inset -2px 0px 5px -2px $gray-2, 0px 0px 0px 0px $gray-2,
+  }
+  &:not(:active){
+    transition: box-shadow 100ms ease-out, background 100ms ease-out;
+  }
+  &:not(:hover){
+    transition: box-shadow 200ms ease-out, background 20ms ease-out;
+  }
+}

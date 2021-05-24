@@ -1,11 +1,15 @@
 import './SideBarItem.scss';
-function SideBarItem() {
+import {Link
+} from "react-router-dom";
+function SideBarItem(props) {
   return (
-          <div className="side-bar-item">
-              <p className="unmark-text">
-                Endpoints
-              </p>
-          </div>
+    <Link to={props.path} className="unmark-text">
+      <div className="side-bar-item" onClick={props.onClick}>
+        <p className="unmark-text">
+          {props.name}
+        </p>
+      </div>
+    </Link>
   );
 }
 

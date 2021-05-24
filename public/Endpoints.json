@@ -1,0 +1,68 @@
+{ 
+  "data":[
+    {
+      "endpointId": 1,
+      "endpointName": "/Endpoint1"
+    },
+    {
+      "endpointId": 2,
+      "endpointName": "/Endpoint2"
+    },
+    {
+      "endpointId": 3,
+      "endpointName": "/Endpoint3"
+    },
+    {
+      "endpointId": 4,
+      "endpointName": "/Endpoint4"
+    },
+    {
+      "endpointId": 5,
+      "endpointName": "/Endpoint5"
+    },
+    {
+      "endpointId": 6,
+      "endpointName": "/Endpoint6"
+    },
+    {
+      "endpointId": 7,
+      "endpointName": "/Endpoint7"
+    },
+    {
+      "endpointId": 8,
+      "endpointName": "/Endpoint8"
+    },
+    {
+      "endpointId": 9,
+      "endpointName": "/Endpoint9"
+    },
+    {
+      "endpointId": 10,
+      "endpointName": "/Endpoint10"
+    },
+    {
+      "endpointId": 11,
+      "endpointName": "/Endpoint11"
+    },
+    {
+      "endpointId": 12,
+      "endpointName": "/Endpoint12"
+    },
+    {
+      "endpointId": 13,
+      "endpointName": "/Endpoint13"
+    },
+    {
+      "endpointId": 14,
+      "endpointName": "/Endpoint14"
+    },
+    {
+      "endpointId": 15,
+      "endpointName": "/Endpoint15"
+    },
+    {
+      "endpointId": 16,
+      "endpointName": "/Endpoint16"
+    }
+  ]
+}
