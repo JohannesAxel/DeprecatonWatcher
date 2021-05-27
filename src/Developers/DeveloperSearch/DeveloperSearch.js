@@ -1,13 +1,13 @@
 
 import { Button, TableContainer } from '@material-ui/core';
-import SearchTable from '../SearchTable/SearchTable';
+import SearchTable from '../../SearchTable/SearchTable';
 import './DeveloperSearch.scss';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import {fetchDevelopers} from '../Server/RequestHandler';
+import {fetchDevelopers} from '../../Server/RequestHandler';
 import React, { useState, useEffect } from 'react';
 
-function App() {
+function DeveloperSearch() {
 
   const [rows, setRows] = useState([])
   const [total, setTotal] = useState(0)
@@ -41,14 +41,19 @@ function App() {
 
   useEffect(async () => {
     const response = await fetchDevelopers(rowsPerPage,rowsPerPage*page,order,orderBy,search)
-    setRows(response.data)
+    const rows = response.data.map((row) => {
+      return {id: row.developerId,
+              developerName: row.developerName,
+              requests: row.requests}
+    })
+    setRows(rows)
     setTotal(response.total)
   },[page,rowsPerPage,order,orderBy,search])
   return (
     <>
       <div className="title-4 unmark-text">
-      Developer search
-      </div> 
+        Developers
+      </div>
       <div className="search-field">
         <Grid container justify="space-around">
           <TextField id="search" label="Search" margin="normal" align="left" onChange={handleSearch}/>
@@ -62,6 +67,6 @@ function App() {
   );
 }
 
-export default App;
+export default DeveloperSearch;
 
 

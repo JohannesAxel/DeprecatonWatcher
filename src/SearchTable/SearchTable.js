@@ -17,6 +17,13 @@ import FirstPageIcon from '@material-ui/icons/FirstPage';
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
+import {
+  Link,
+  useRouteMatch,
+  useParams,
+  useHistory
+} from "react-router-dom";
+
 
 const useStyles1 = makeStyles((theme) => ({
   root: {
@@ -31,6 +38,7 @@ const useStyles1 = makeStyles((theme) => ({
 
 
 function TablePaginationActions(props) {
+  
   const classes = useStyles1();
   const theme = useTheme();
   const { count, page, rowsPerPage, onChangePage } = props;
@@ -98,12 +106,16 @@ const useStyles2 = makeStyles({
 });
 
 export default function SearchTable(props) {
-  
+  const history = useHistory();
+  var match = useRouteMatch();
   var rows =  props.rows ? props.rows : []
   const emptyRows = props.rowsPerPage - Math.min(props.rowsPerPage, props.total - props.page * props.rowsPerPage);
 
 
 
+  function handleRowClick(event){
+    history.push(`${match.url}/${event.target.getAttribute('href')}`)
+  }
 
   const classes = useStyles();
   const createSortHandler = (property) => (event) => {
@@ -115,7 +127,7 @@ export default function SearchTable(props) {
       <Table aria-label="custom pagination table" font-family>
         <TableHead>
           <TableRow>
-          {props.cellStruct.map(cell => 
+          {props.cellStruct.map(cell =>  
                 <TableCell component="th" scope="row">
                   <TableSortLabel
                     active={props.orderBy === cell.id}
@@ -129,19 +141,20 @@ export default function SearchTable(props) {
                     ) : null}
                   </TableSortLabel>
                   {cell.name}
-                </TableCell>
+                </TableCell>              
               )}
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow name="data-row" key={row.developerId}>
-            {props.cellStruct.map(cell => 
-                <TableCell component="th" scope="row">
-                  {row?.[cell.id]}
-                </TableCell>
-              )}
-              </TableRow>
+              <TableRow onClick={handleRowClick} name="data-row" key={row.id}>
+              {props.cellStruct.map(cell => 
+                  <TableCell component="th" scope="row" href={`${row.id}`}>
+                    {row?.[cell.id]}
+                  </TableCell>
+                )}
+                </TableRow>
+              
           ))}
           {emptyRows > 0 && (
             <TableRow style={{ height: 53 * emptyRows }}>

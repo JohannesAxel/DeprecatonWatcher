@@ -1,14 +1,14 @@
 import { TableContainer } from '@material-ui/core';
-import SearchTable from '../SearchTable/SearchTable';
+import SearchTable from '../../SearchTable/SearchTable';
 import TextField from '@material-ui/core/TextField';
 import DateFnsUtils from '@date-io/date-fns';
 import Grid from '@material-ui/core/Grid';
 import './EndpointSearch.scss';
 import React, { useState, useEffect } from 'react';
-import {fetchEndpoints} from '../Server/RequestHandler';
+import {fetchEndpoints} from '../../Server/RequestHandler';
 import {MuiPickersUtilsProvider, KeyboardTimePicker, KeyboardDatePicker} from '@material-ui/pickers';
 
-function App() {
+function EndpointSearch() {
 
   const [selectedDate, setSelectedDate] = useState(new Date(Date.now()));
 
@@ -48,15 +48,20 @@ function App() {
 
   useEffect(async () => {
     const response = await fetchEndpoints(rowsPerPage,rowsPerPage*page,order,orderBy,search)
-    setRows(response.data)
+    const rows = response.data.map((row) => {
+      return {id: row.endpointId,
+              endpointName: row.endpointName,
+              requests: row.requests}
+    })
+    setRows(rows)
     setTotal(response.total)
   },[page,rowsPerPage,order,orderBy,search])
 
   return (
     <>
       <div className="title-4 unmark-text">
-        Endpoint search
-      </div> 
+        Endpoints
+      </div>
       <Grid container justify="space-around">
         <TextField id="search" label="Search" margin="normal" onChange={handleSearch}/>
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -83,6 +88,6 @@ function App() {
   );
 }
 
-export default App;
+export default EndpointSearch;
 
 

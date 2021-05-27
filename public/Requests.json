@@ -3,47 +3,56 @@
     {
       "endpointId": 1,
       "developerId": 6,
-      "Date": "2021-05-23T18:25:43.511Z"
+      "date": "2021-01-13",
+      "sum":26
     },
     {
     "endpointId": 1,
     "developerId": 6,
-    "Date": "2021-01-23T18:25:43.511Z"
+    "date": "2021-02-20",
+    "sum":21
     },
     {
       "endpointId": 1,
       "developerId": 6,
-      "Date": "2021-05-23T18:25:43.511Z"
+      "date": "2021-03-21",
+      "sum":2
     },
     {
     "endpointId": 1,
     "developerId": 6,
-    "Date": "2021-02-23T18:25:43.511Z"
+    "date": "2021-04-22",
+    "sum":80
     },
     {
       "endpointId": 1,
       "developerId": 6,
-      "Date": "2021-02-23T18:25:43.511Z"
+      "date": "2021-05-23",
+      "sum":21
     },
     {
     "endpointId": 1,
     "developerId": 6,
-    "Date": "2021-02-23T18:25:43.511Z"
+    "date": "2021-06-24",
+    "sum":22
     },
     {
       "endpointId": 1,
       "developerId": 6,
-      "Date": "2021-03-23T18:25:43.511Z"
+      "date": "2021-07-25",
+      "sum":25
     },
     {
     "endpointId": 1,
     "developerId": 6,
-    "Date": "2021-04-23T18:25:43.511Z"
+    "date": "2021-08-26",
+    "sum":29
     },
     {
       "endpointId": 2,
       "developerId": 6,
-      "Date": "2021-05-23T18:25:43.511Z"
+      "date": "2021-07-25",
+      "sum":40
     }
   ]
 }

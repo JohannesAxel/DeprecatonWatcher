@@ -27,4 +27,8 @@
   &:not(:hover){
     transition: box-shadow 200ms ease-out, width 200ms ease-out;
   }
+
+  .active{
+    background-color: $lime;
+  }
 }

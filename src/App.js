@@ -1,17 +1,25 @@
 import './App.scss';
 import SideBar from './SideBar/SideBar';
-import EndpointSearch from './EndpointSearch/EndpointSearch';
-import DeveloperSearch from './DeveloperSearch/DeveloperSearch';
+import Endpoints from './Endpoints/Endpoints';
+import Developers from './Developers/Developers';
 import Paper from '@material-ui/core/Paper';
+import {useEffect, useState} from 'react'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
+  useRouteMatch
 } from "react-router-dom";
 
-
+const sideBarStruct = [
+  {name: "Endpoints", path:"/endpoints"},
+  {name: "Developers", path:"/developers"}
+]
 
 function App() {
+  
+
   return (
     <div className="page-container">
       <div className="header">
@@ -21,17 +29,15 @@ function App() {
       </div> 
       <div className="main">
       <Router>
-        <SideBar pages={[{name: "Endpoint Search", path:"/endpoints"}, {name: "Developer Search", path:"/developers"}]}/>
+        <SideBar pages={sideBarStruct}/>
           <div className="info-container">
               <Switch>
-                <Route exact path="/endpoints">
-                  <EndpointSearch/>
+                <Redirect exact from="/" to="/endpoints"/>
+                <Route path="/endpoints">
+                  <Endpoints/>
                 </Route>
                 <Route path="/developers">
-                  <DeveloperSearch/>
-                </Route>
-                <Route path="/">
-                  <EndpointSearch/>
+                  <Developers/>
                 </Route>
               </Switch>
           </div>
