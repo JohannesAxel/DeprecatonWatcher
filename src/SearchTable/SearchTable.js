@@ -18,9 +18,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import {
-  Link,
   useRouteMatch,
-  useParams,
   useHistory
 } from "react-router-dom";
 
@@ -99,6 +97,20 @@ const useStyles2 = makeStyles({
     minWidth: 500,
   },
 });
+
+
+/*
+{rows} data rows for current page
+{total} total number of data rows
+{page} current page
+{rowsPerPage} rows per page
+{handleChangePage} function to handle new page request
+{handleChangeRowsPerPage} function to handle new rows per page request
+{cellStruct} the structure of the search table example: [{name:"Name", id:"developerName"},{name:"Endpoints",id:"endpoints"}, {name:"Requests", id:"requests"}] where id is name for function
+{orderBy} orderBy column
+{order} acs or desc
+{handleRequestSort} function to handle new sort
+*/
 
 function SearchTable(props) {
   const history = useHistory();
