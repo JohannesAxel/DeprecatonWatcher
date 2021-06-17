@@ -7,54 +7,40 @@ import {
 } from "react-router-dom";
 import ReactApexChart from 'react-apexcharts'
 import {fetchDeveloper} from "../../Server/RequestHandler"
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
 
 import React, { useState, useEffect } from 'react';
 
 
-function App(props) {
+function Developer(props) {
 
   let { id } = useParams();
-  const [data, setData] = useState({})
-  const [series, setSeries] = useState([
-      {
-        name: 'South',
-        data: [[],[]]
-      },
-      {
-        name: 'North',
-        data: [[],[]]
-      },
-      {
-        name: 'Central',
-        data: [[],[]]
-      }
-    ])
 
+  //ResponseData
+  const [data, setData] = useState({})
+
+  //ApexCharts Data
+  const [series, setSeries] = useState([])
+
+    //ApexCharts settings
     const [options, setOptions] = useState({
       chart: {
-        type: 'area',
+        type: 'line',
         height: 350,
         animations: {
           enabled: false
         },
         zoom: {
-          enabled: false
+          enabled: true
         },
       },
       dataLabels: {
-        enabled: false
+        enabled: true
       },
       stroke: {
+        width: [5,5,4],
         curve: 'straight'
-      },
-      fill: {
-        opacity: 0.8,
-        type: 'pattern',
-        pattern: {
-          style: ['verticalLines', 'horizontalLines'],
-          width: 5,
-          height: 6
-        },
       },
       markers: {
         size: 5,
@@ -63,41 +49,44 @@ function App(props) {
         }
       },
       title: {
-        text: 'Network Monitoring',
+        text: 'Request Monitoring',
       },
       tooltip: {
-        intersect: true,
-        shared: false
-      },
-      theme: {
-        palette: 'palette1'
+        shared: true
       },
       xaxis: {
         type: 'datetime',
       },
       yaxis: {
         title: {
-          text: 'Bytes Received'
+          text: 'Requests Sent'
         }
       }})
 
 
   useEffect(async () => {
+
+    //GET data
     const response = await fetchDeveloper(id)
     setData(response.data)
     setSeries(response.data.requests)
   },[])
 
 return (
-  <>
-    <div className="title-4 unmark-text">
-      <h3>{data?.developerName}</h3>
-      <ReactApexChart options={options} series={series} type="area" height={350} />
-
-    </div>
-</>
+  <Grid container direction="column" spacing={8}>
+    <Grid item>
+      <div className="title-4 unmark-text">
+        <h3>{data?.developerName}</h3>
+      </div>
+    </Grid>
+    <Grid item>
+      <Paper>
+        <ReactApexChart options={options} series={series} type="area" height={350} />
+      </Paper>
+    </Grid>
+</Grid>
 );
 
 }
 
-export default App;
+export default Developer;

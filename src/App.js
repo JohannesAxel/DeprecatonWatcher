@@ -1,9 +1,10 @@
 import './App.scss';
-import SideBar from './SideBar/SideBar';
 import Endpoints from './Endpoints/Endpoints';
 import Developers from './Developers/Developers';
 import Paper from '@material-ui/core/Paper';
 import {useEffect, useState} from 'react'
+
+import Header from './Header/Header'
 import {
   BrowserRouter as Router,
   Switch,
@@ -22,27 +23,22 @@ function App() {
 
   return (
     <div className="page-container">
-      <div className="header">
-        <div className="title unmark-text">
-          Endpoint Watcher
-        </div>
-      </div> 
-      <div className="main">
       <Router>
-        <SideBar pages={sideBarStruct}/>
-          <div className="info-container">
-              <Switch>
-                <Redirect exact from="/" to="/endpoints"/>
-                <Route path="/endpoints">
-                  <Endpoints/>
-                </Route>
-                <Route path="/developers">
-                  <Developers/>
-                </Route>
-              </Switch>
-          </div>
-        </Router>
-      </div>
+        <div className="header">
+          <Header pages={sideBarStruct}/>
+        </div> 
+        <div className="main">
+          <Switch>
+            <Redirect exact from="/" to="/endpoints"/>
+            <Route path="/endpoints">
+              <Endpoints/>
+            </Route>
+            <Route path="/developers">
+              <Developers/>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }

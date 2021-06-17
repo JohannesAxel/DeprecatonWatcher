@@ -32,11 +32,6 @@ const useStyles1 = makeStyles((theme) => ({
   },
 }));
 
-
-
-
-
-
 function TablePaginationActions(props) {
   
   const classes = useStyles1();
@@ -105,7 +100,7 @@ const useStyles2 = makeStyles({
   },
 });
 
-export default function SearchTable(props) {
+function SearchTable(props) {
   const history = useHistory();
   var match = useRouteMatch();
   var rows =  props.rows ? props.rows : []
@@ -128,20 +123,22 @@ export default function SearchTable(props) {
         <TableHead>
           <TableRow>
           {props.cellStruct.map(cell =>  
-                <TableCell component="th" scope="row">
-                  <TableSortLabel
-                    active={props.orderBy === cell.id}
-                    direction={props.orderBy === cell.id ? props.order : 'asc'}
-                    onClick={createSortHandler(cell.id)}
-                  >
-                    {props.orderBy === cell.id ? (
-                      <span className={classes.visuallyHidden}>
-                        {props.order === 'desc' ? 'sorted descending' : 'sorted ascending'}
-                      </span>
-                    ) : null}
-                  </TableSortLabel>
-                  {cell.name}
-                </TableCell>              
+                  <TableCell component="th" scope="row">
+                    <div class="columnHeadName" onClick={createSortHandler(cell.id)}>
+                    <TableSortLabel
+                      active={props.orderBy === cell.id}
+                      direction={props.orderBy === cell.id ? props.order : 'asc'}
+                      onClick={createSortHandler(cell.id)}
+                      >
+                      {props.orderBy === cell.id ? (
+                        <span className={classes.visuallyHidden}>
+                          {props.order === 'desc' ? 'sorted descending' : 'sorted ascending'}
+                        </span>
+                      ) : null}
+                    </TableSortLabel>
+                    {cell.name}
+                  </div>
+                  </TableCell>              
               )}
           </TableRow>
         </TableHead>
@@ -198,3 +195,5 @@ visuallyHidden: {
   width: 1
   }
 }))
+
+export default SearchTable;

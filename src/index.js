@@ -5,6 +5,40 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 
+
+//Set fake data
+async function setData (){
+  const developersResponse = await fetch("http://localhost:3000/Developers.json")
+  .then(response => {
+    return response.json();
+  })
+  
+  const requestsResponse = await fetch("http://localhost:3000/Requests.json")
+  .then(response => {
+    return response.json();
+  })
+  
+  const endpointsResponse =  await fetch("http://localhost:3000/Endpoints.json")
+  .then(response => {
+    return response.json();
+  })
+
+  const deprecationsResponse =  await fetch("http://localhost:3000/Deprecations.json")
+  .then(response => {
+    return response.json();
+  })
+
+  window.sessionStorage.setItem("developers", JSON.stringify(developersResponse))
+  
+  window.sessionStorage.setItem("requests", JSON.stringify(requestsResponse))
+  
+  window.sessionStorage.setItem("endpoints", JSON.stringify(endpointsResponse))
+
+  window.sessionStorage.setItem("deprecations", JSON.stringify(deprecationsResponse))
+}
+
+setData()
+
 const theme = createMuiTheme({
   palette: {
     primary: {
@@ -24,7 +58,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

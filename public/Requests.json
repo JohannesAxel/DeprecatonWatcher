@@ -2,57 +2,222 @@
   "data":[
     {
       "endpointId": 1,
-      "developerId": 6,
-      "date": "2021-01-13",
+      "developerId": 1,
+      "date": "2021-05-27",
+      "sum":26
+    },
+    {
+      "endpointId": 1,
+      "developerId": 1,
+      "date": "2021-05-26",
       "sum":26
     },
     {
     "endpointId": 1,
-    "developerId": 6,
-    "date": "2021-02-20",
+    "developerId": 1,
+    "date": "2021-05-25",
     "sum":21
     },
     {
       "endpointId": 1,
-      "developerId": 6,
-      "date": "2021-03-21",
+      "developerId": 1,
+      "date": "2021-05-24",
       "sum":2
     },
     {
     "endpointId": 1,
-    "developerId": 6,
-    "date": "2021-04-22",
+    "developerId": 1,
+    "date": "2021-05-23",
     "sum":80
     },
     {
       "endpointId": 1,
-      "developerId": 6,
-      "date": "2021-05-23",
-      "sum":21
+      "developerId": 1,
+      "date": "2021-05-22",
+      "sum":23
     },
     {
     "endpointId": 1,
-    "developerId": 6,
-    "date": "2021-06-24",
+    "developerId": 1,
+    "date": "2021-05-21",
+    "sum":76
+    },
+    {
+      "endpointId": 1,
+      "developerId": 1,
+      "date": "2021-05-20",
+      "sum":8
+    },
+    
+    {
+      "endpointId": 1,
+      "developerId": 12,
+      "date": "2021-05-27",
+      "sum":89
+    },
+    {
+      "endpointId": 1,
+      "developerId": 12,
+      "date": "2021-05-26",
+      "sum":80
+    },
+    {
+    "endpointId": 1,
+    "developerId": 12,
+    "date": "2021-05-25",
+    "sum":37
+    },
+    {
+      "endpointId": 1,
+      "developerId": 12,
+      "date": "2021-05-24",
+      "sum":77
+    },
+    {
+    "endpointId": 1,
+    "developerId": 12,
+    "date": "2021-05-23",
+    "sum":60
+    },
+    {
+      "endpointId": 1,
+      "developerId": 12,
+      "date": "2021-05-22",
+      "sum":90
+    },
+    {
+    "endpointId": 1,
+    "developerId": 12,
+    "date": "2021-05-21",
     "sum":22
     },
     {
       "endpointId": 1,
-      "developerId": 6,
-      "date": "2021-07-25",
-      "sum":25
+      "developerId": 12,
+      "date": "2021-05-20",
+      "sum":59
     },
     {
     "endpointId": 1,
-    "developerId": 6,
-    "date": "2021-08-26",
+    "developerId": 3,
+    "date": "2021-05-26",
     "sum":29
     },
     {
-      "endpointId": 2,
+      "endpointId": 8,
       "developerId": 6,
-      "date": "2021-07-25",
+      "date": "2021-05-25",
       "sum":40
+    },
+    {
+      "endpointId": 3,
+      "developerId": 1,
+      "date": "2021-05-27",
+      "sum":26
+    },
+    {
+      "endpointId": 4,
+      "developerId": 1,
+      "date": "2021-05-26",
+      "sum":26
+    },
+    {
+    "endpointId": 4,
+    "developerId": 1,
+    "date": "2021-05-25",
+    "sum":21
+    },
+    {
+      "endpointId": 5,
+      "developerId": 1,
+      "date": "2021-05-24",
+      "sum":2
+    },
+    {
+    "endpointId": 6,
+    "developerId": 1,
+    "date": "2021-05-23",
+    "sum":80
+    },
+    {
+      "endpointId": 7,
+      "developerId": 1,
+      "date": "2021-05-22",
+      "sum":23
+    },
+    {
+    "endpointId": 2,
+    "developerId": 1,
+    "date": "2021-05-21",
+    "sum":76
+    },
+    {
+      "endpointId": 4,
+      "developerId": 1,
+      "date": "2021-05-20",
+      "sum":8
+    },
+    
+    {
+      "endpointId": 12,
+      "developerId": 12,
+      "date": "2021-05-27",
+      "sum":89
+    },
+    {
+      "endpointId": 13,
+      "developerId": 12,
+      "date": "2021-05-26",
+      "sum":80
+    },
+    {
+      "endpointId": 13,
+      "developerId": 12,
+      "date": "2021-05-25",
+      "sum":84
+    },
+    {
+      "endpointId": 13,
+      "developerId": 12,
+      "date": "2021-05-24",
+      "sum":18
+    },
+
+    {
+    "endpointId": 9,
+    "developerId": 3,
+    "date": "2021-05-26",
+    "sum":29
+    },
+    {
+      "endpointId": 4,
+      "developerId": 6,
+      "date": "2021-05-23",
+      "sum":40
+    },
+    {
+      "endpointId": 4,
+      "developerId": 8,
+      "date": "2021-05-24",
+      "sum":22
+    },
+    {
+      "endpointId": 4,
+      "developerId": 8,
+      "date": "2021-05-25",
+      "sum":44
+    },
+    {
+      "endpointId": 4,
+      "developerId": 8,
+      "date": "2021-05-26",
+      "sum":70
+    },
+    {
+      "endpointId": 4,
+      "developerId": 8,
+      "date": "2021-05-27",
+      "sum":12
     }
   ]
 }

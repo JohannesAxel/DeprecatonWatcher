@@ -7,10 +7,7 @@ import './EndpointSearch.scss';
 import React, { useState, useEffect } from 'react';
 import {fetchEndpoints} from '../../Server/RequestHandler';
 import {MuiPickersUtilsProvider, KeyboardTimePicker, KeyboardDatePicker} from '@material-ui/pickers';
-
 function EndpointSearch() {
-
-  const [selectedDate, setSelectedDate] = useState(new Date(Date.now()));
 
   const [rows, setRows] = useState([])
   const [total, setTotal] = useState(0)
@@ -19,9 +16,11 @@ function EndpointSearch() {
   const [orderBy, setOrderBy] = useState("endpointName")
   const [order, setOrder] = useState("asc")
   const [search, setSearch] = useState("")
-  
+  const [date, setDate] = useState("2021-01-27")
+
+  const cellStruct = [{name:"Name", id:"endpointName"},{name:"Developers", id:"developers"},{name:"Requests", id:"requests"},{name:"Deprecated", id:"deprecated"}]
   const handleDateChange = (date) => {
-    setSelectedDate(date);
+    setDate(date);
   };
 
   const handleRequestSort = (event, property) => {
@@ -43,48 +42,61 @@ function EndpointSearch() {
     clearTimeout(timeout);
     timeout = setTimeout(function () {
       setSearch(event.target.value)
+      
   }, 500);
   };
 
   useEffect(async () => {
-    const response = await fetchEndpoints(rowsPerPage,rowsPerPage*page,order,orderBy,search)
+    const response = await fetchEndpoints(rowsPerPage,rowsPerPage*page,order,orderBy,search,date)
     const rows = response.data.map((row) => {
       return {id: row.endpointId,
               endpointName: row.endpointName,
-              requests: row.requests}
+              requests: row.requests,
+              developers: row.developers,
+              deprecated: row.deprecated}
     })
     setRows(rows)
     setTotal(response.total)
-  },[page,rowsPerPage,order,orderBy,search])
+  },[page,rowsPerPage,order,orderBy,search,date])
 
   return (
-    <>
-      <div className="title-4 unmark-text">
-        Endpoints
-      </div>
-      <Grid container justify="space-around">
-        <TextField id="search" label="Search" margin="normal" onChange={handleSearch}/>
-          <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <KeyboardDatePicker
-              disableToolbar
-              variant="inline"
-              format="MM/dd/yyyy"
-              margin="normal"
-              id="date-picker-inline"
-              label="Count Requests"
-              value={selectedDate}
-              onChange={handleDateChange}
-              KeyboardButtonProps={{
-                'aria-label': 'change date',
-              }}
-            />
-          </MuiPickersUtilsProvider>
+    <Grid container direction="column" spacing={2}>
+      <Grid item>
+        <div className="title-4 unmark-text">
+          <h3>Endpoints</h3> 
+        <i class="fas fa-camera"></i>
+        </div>
+      </Grid>
+      <Grid item container spacing={3}  direction="row" justify="flex-start" alignItems="center">
+        <Grid item>
+          <TextField id="search" label="Search" margin="normal" align="left" onChange={handleSearch}/>
         </Grid>
-      <SearchTable rows={rows} total={total} page={page} rowsPerPage={rowsPerPage} 
-      handleChangePage={handleChangePage} handleChangeRowsPerPage={handleChangeRowsPerPage}
-      cellStruct={[{name:"Name", id:"endpointName"},{name:"Requests", id:"requests"}]}
-      orderBy={orderBy} order={order} handleRequestSort={handleRequestSort}/>
-  </>
+ 
+        <Grid item>
+            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+              <KeyboardDatePicker
+                disableToolbar
+                variant="inline"
+                format="yyyy-MM-dd"
+                margin="normal"
+                id="date-picker-inline"
+                label="Count Requests From"
+                value={date}
+                onChange={handleDateChange}
+                KeyboardButtonProps={{
+                  'aria-label': 'change date',
+                }}
+              />
+            </MuiPickersUtilsProvider>
+          </Grid>
+        </Grid>
+        <Grid item>
+          <SearchTable rows={rows} total={total} page={page} rowsPerPage={rowsPerPage} 
+          handleChangePage={handleChangePage} handleChangeRowsPerPage={handleChangeRowsPerPage}
+          cellStruct={cellStruct}
+          orderBy={orderBy} order={order} handleRequestSort={handleRequestSort}/>
+        </Grid>
+  </Grid>
   );
 }
 

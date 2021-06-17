@@ -28,6 +28,7 @@ select {
     width:90%;
     transition: box-shadow 50ms ease-out, background 10ms ease-out;
     box-shadow:inset 0px 0px 0px 0px $gray-2, inset 0px 0px 0px 0px $gray-2, 1px 0px 4px -1px $gray-2, -1px 0px 4px -1px $gray-2, 0px 1px 4px -1px $gray-2, 0px -1px 4px -1px $gray-2;
+    cursor: pointer;
   }
   &:active{  
     transition: box-shadow 100ms ease-out, background 100ms ease-out;
@@ -39,5 +40,12 @@ select {
   }
   &:not(:hover){
     transition: box-shadow 200ms ease-out, background 20ms ease-out;
+  }
+}
+.columnHeadName{
+  max-width: fit-content;
+  user-select: none;
+  &:hover{
+    cursor: pointer;
   }
 }

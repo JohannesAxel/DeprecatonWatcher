@@ -1,0 +1,12 @@
+@import '/src/index.scss';
+
+a{
+  cursor: pointer;
+  width: fit-content;
+  color:#ffff;
+  text-decoration:none;
+  &:hover{
+    color: #b5e48c
+  }
+
+}

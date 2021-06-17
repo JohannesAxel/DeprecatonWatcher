@@ -4,11 +4,9 @@ import Developer from "./Developer/Developer"
 import {
   Switch,
   Route,
-  Link,
   useRouteMatch,
-  useParams
 } from "react-router-dom";
-function App(props) {
+function Developers(props) {
   let match = useRouteMatch();
 
   return (
@@ -27,4 +25,4 @@ function App(props) {
   
   }
   
-  export default App;
+  export default Developers;

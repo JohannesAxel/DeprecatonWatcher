@@ -1,0 +1,18 @@
+{
+  "data":[
+    {
+      "deprecationId": 1,
+      "endpointId": 1,
+      "firstMail":"Hello, we will remove endpoint one in six months",
+      "reminderMail":"Hello, we can see that you are still using this /endpoint1 please dont",
+      "lastWarningMail":"DONT USE ENDPOINT ONE IT WILL BE REMOVED 2021-11-29",
+      "firstMailReq":"Everyone",
+      "reminderMailReq":"Using",
+      "lastWarningMailReq":"Using",
+      "removalDate":"2021-11-29",
+      "firstMailDates":[],
+      "reminderMailDates":[],
+      "lastWarningMailDates":["2021-11-26","2021-11-27","2021-11-28"]
+    }
+  ]
+}
